@@ -29,14 +29,14 @@
               
               	@module-configuration:
               		{
-              			"package": "ngrave ",
-              			"path": "ngrave /ngrave .js",
-              			"file": "ngrave .js",
-              			"module": "ngrave ",
+              			"package": "ngrave",
+              			"path": "ngrave/ngrave.js",
+              			"file": "ngrave.js",
+              			"module": "ngrave",
               			"author": "Richeve S. Bebedor",
               			"eMail": "richeve.bebedor@gmail.com",
-              			"repository": "https://github.com/volkovasystems/ngrave .git",
-              			"test": "ngrave -test.js",
+              			"repository": "https://github.com/volkovasystems/ngrave.git",
+              			"test": "ngrave-test.js",
               			"global": true
               		}
               	@end-module-configuration

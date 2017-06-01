@@ -29,14 +29,14 @@
 
 	@module-configuration:
 		{
-			"package": "ngrave ",
-			"path": "ngrave /ngrave .js",
-			"file": "ngrave .js",
-			"module": "ngrave ",
+			"package": "ngrave",
+			"path": "ngrave/ngrave.js",
+			"file": "ngrave.js",
+			"module": "ngrave",
 			"author": "Richeve S. Bebedor",
 			"eMail": "richeve.bebedor@gmail.com",
-			"repository": "https://github.com/volkovasystems/ngrave .git",
-			"test": "ngrave -test.js",
+			"repository": "https://github.com/volkovasystems/ngrave.git",
+			"test": "ngrave-test.js",
 			"global": true
 		}
 	@end-module-configuration
@@ -60,7 +60,7 @@ const protype = require( "protype" );
 
 const SYMBOL_PATTERN = /^Symbol\((.+?)\)$/;
 
-const ngrave  = function ngrave( symbol, entity, value ){
+const ngrave = function ngrave( symbol, entity, value ){
 	/*;
 		@meta-configuration:
 			{
@@ -99,4 +99,4 @@ const ngrave  = function ngrave( symbol, entity, value ){
 	return entity;
 };
 
-module.exports = ngrave ;
+module.exports = ngrave;
