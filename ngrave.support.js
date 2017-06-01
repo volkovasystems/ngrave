@@ -43,6 +43,9 @@
               
               	@module-documentation:
               		Push symbol property value.
+              
+              		If you passed a non-symbol type symbol value, then it will
+              			be transformed to a unique symbol.
               	@end-module-documentation
               
               	@include:
@@ -52,7 +55,7 @@
               			"protype": "protype"
               		}
               	@end-include
-              */var _getOwnPropertySymbols = require("babel-runtime/core-js/object/get-own-property-symbols");var _getOwnPropertySymbols2 = _interopRequireDefault(_getOwnPropertySymbols);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+              */var _getOwnPropertySymbols = require("babel-runtime/core-js/object/get-own-property-symbols");var _getOwnPropertySymbols2 = _interopRequireDefault(_getOwnPropertySymbols);var _symbol = require("babel-runtime/core-js/symbol");var _symbol2 = _interopRequireDefault(_symbol);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var falzy = require("falzy");
 var mtch = require("mtch");
@@ -64,7 +67,11 @@ var ngrave = function ngrave(symbol, entity, value) {
 	/*;
                                                      	@meta-configuration:
                                                      		{
-                                                     			"symbol:required": "symbol",
+                                                     			"symbol:required": [
+                                                     				"number",
+                                                     				"string",
+                                                     				"symbol"
+                                                     			],
                                                      			"entity:required": [
                                                      				"function",
                                                      				"object"
@@ -73,12 +80,16 @@ var ngrave = function ngrave(symbol, entity, value) {
                                                      	@end-meta-configuration
                                                      */
 
-	if (falzy(symbol) || !protype(symbol, SYMBOL)) {
+	if (falzy(symbol) || !protype(symbol, NUMBER + STRING + SYMBOL)) {
 		throw new Error("invalid symbol");
 	}
 
 	if (falzy(entity) || !protype(entity, FUNCTION + OBJECT)) {
 		throw new Error("invalid entity");
+	}
+
+	if (!protype(symbol, SYMBOL)) {
+		symbol = (0, _symbol2.default)(symbol);
 	}
 
 	var string = mtch(symbol.toString(), SYMBOL_PATTERN, 1);

@@ -43,6 +43,9 @@
 
 	@module-documentation:
 		Push symbol property value.
+
+		If you passed a non-symbol type symbol value, then it will
+			be transformed to a unique symbol.
 	@end-module-documentation
 
 	@include:
@@ -64,7 +67,11 @@ const ngrave = function ngrave( symbol, entity, value ){
 	/*;
 		@meta-configuration:
 			{
-				"symbol:required": "symbol",
+				"symbol:required": [
+					"number",
+					"string",
+					"symbol"
+				],
 				"entity:required": [
 					"function",
 					"object"
@@ -73,12 +80,16 @@ const ngrave = function ngrave( symbol, entity, value ){
 		@end-meta-configuration
 	*/
 
-	if( falzy( symbol ) || !protype( symbol, SYMBOL ) ){
+	if( falzy( symbol ) || !protype( symbol, NUMBER + STRING + SYMBOL ) ){
 		throw new Error( "invalid symbol" );
 	}
 
 	if( falzy( entity ) || !protype( entity, FUNCTION + OBJECT ) ){
 		throw new Error( "invalid entity" );
+	}
+
+	if( !protype( symbol, SYMBOL ) ){
+		symbol = Symbol( symbol );
 	}
 
 	let string = mtch( symbol.toString( ), SYMBOL_PATTERN, 1 );
