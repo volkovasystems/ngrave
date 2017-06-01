@@ -1,0 +1,44 @@
+{
+  "name": "ngrave",
+  "version": "0.0.0",
+  "description": "Push symbol property value.",
+  "main": "ngrave.js",
+  "support": "ngrave.support.js",
+  "deploy": "ngrave.deploy.js",
+  "browser": "ngrave.deploy.js",
+  "scripts": {
+    "build": "babel ngrave.js --out-file ngrave.support.js --source-maps && webpack --progress --display-modules",
+    "test": "mocha ngrave-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/ngrave.git"
+  },
+  "keywords": [
+    "push",
+    "symbol",
+    "property",
+    "value",
+    "ngrave"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/ngrave/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/ngrave#readme",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "falzy": "^0.19.0",
+    "mtch": "^0.1.0",
+    "protype": "^0.21.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "source-map-loader": "^0.2.1",
+    "webpack": "^2.6.1"
+  }
+}
