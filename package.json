@@ -1,6 +1,6 @@
 {
   "name": "ngrave",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Push symbol property value.",
   "main": "ngrave.js",
   "support": "ngrave.support.js",
@@ -22,6 +22,10 @@
     "ngrave"
   ],
   "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "contributors": [
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/ngrave/issues"
@@ -29,13 +33,13 @@
   "homepage": "https://github.com/volkovasystems/ngrave#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "falzy": "^0.19.0",
-    "mtch": "^0.1.0",
-    "protype": "^0.21.0"
+    "falzy": "^0.20.0",
+    "mtch": "^0.2.0",
+    "protype": "^0.22.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
+    "babel-core": "^6.25.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "source-map-loader": "^0.2.1",
