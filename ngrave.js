@@ -92,7 +92,7 @@ const ngrave = function ngrave( symbol, entity, value ){
 		throw new Error( "invalid entity" );
 	}
 
-	if( !protype( symbol, SYMBOL ) ){
+	if( typeof symbol != SYMBOL ){
 		symbol = Symbol( symbol );
 	}
 
