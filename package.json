@@ -1,6 +1,6 @@
 {
   "name": "ngrave",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Push symbol property value.",
   "main": "ngrave.js",
   "support": "ngrave.support.js",
@@ -34,7 +34,7 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "falzy": "^0.20.0",
-    "mtch": "^0.3.0",
+    "mtch": "^0.4.0",
     "protype": "^0.22.0"
   },
   "devDependencies": {
