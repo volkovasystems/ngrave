@@ -7,6 +7,6 @@ let data = { };
 
 ngrave( symbol, data, 12345 );
 
-assert.equal( data[ symbol ], 12345, "should be equal" );
+assert.equal( data[ symbol ], 12345, "should be equal to 12345" );
 
 console.log( "ok" );
