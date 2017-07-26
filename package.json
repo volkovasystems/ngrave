@@ -1,48 +1,53 @@
 {
-  "name": "ngrave",
-  "version": "0.5.0",
-  "description": "Push symbol property value.",
-  "main": "ngrave.js",
-  "support": "ngrave.support.js",
-  "deploy": "ngrave.deploy.js",
-  "browser": "ngrave.deploy.js",
-  "scripts": {
-    "build": "babel ngrave.js --out-file ngrave.support.js --source-maps && webpack --progress --display-modules",
-    "test": "mocha ngrave-test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volkovasystems/ngrave.git"
-  },
-  "keywords": [
-    "push",
-    "symbol",
-    "property",
-    "value",
-    "ngrave"
-  ],
-  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-  "contributors": [
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volkovasystems/ngrave/issues"
-  },
-  "homepage": "https://github.com/volkovasystems/ngrave#readme",
-  "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "falzy": "^0.20.0",
-    "mtch": "^0.4.0",
-    "protype": "^0.22.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.1.0"
-  }
+	"name": "ngrave",
+	"version": "0.6.0",
+	"description": "Push symbol property value.",
+	"main": "ngrave.js",
+	"support": "ngrave.support.js",
+	"deploy": "ngrave.deploy.js",
+	"browser": "ngrave.deploy.js",
+	"scripts": {
+		"build": "babel ngrave.js --out-file ngrave.support.js --source-maps && webpack --progress --display-modules",
+		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"clear": "rsetmod clean --clear",
+		"formal": "jesy apply '*.json'",
+		"pretest": "npm run clear && npm run build",
+		"test": "node ngrave-test.js",
+		"posttest": "npm run formal"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/volkovasystems/ngrave.git"
+	},
+	"keywords": [
+		"push",
+		"symbol",
+		"property",
+		"value",
+		"ngrave"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"contributors": [
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/volkovasystems/ngrave/issues"
+	},
+	"homepage": "https://github.com/volkovasystems/ngrave#readme",
+	"dependencies": {
+		"babel-runtime": "^6.23.0",
+		"falzy": "^0.23.0",
+		"mtch": "^0.6.0",
+		"protype": "^0.23.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.24.1",
+		"source-map-loader": "^0.2.1",
+		"webpack": "^3.4.0"
+	}
 }

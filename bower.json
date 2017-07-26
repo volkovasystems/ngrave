@@ -1,33 +1,33 @@
 {
-  "name": "ngrave",
-  "version": "0.5.0",
-  "description": "Push symbol property value.",
-  "main": "ngrave.deploy.js",
-  "support": "ngrave.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "push",
-    "symbol",
-    "property",
-    "value",
-    "ngrave"
-  ],
-  "homepage": "https://github.com/volkovasystems/ngrave",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "falzy": "^0.20.0",
-    "mtch": "^0.4.0",
-    "protype": "^0.22.0"
-  }
+	"name": "ngrave",
+	"version": "0.6.0",
+	"description": "Push symbol property value.",
+	"main": "ngrave.deploy.js",
+	"support": "ngrave.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"push",
+		"symbol",
+		"property",
+		"value",
+		"ngrave"
+	],
+	"homepage": "https://github.com/volkovasystems/ngrave",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"falzy": "^0.23.0",
+		"mtch": "^0.6.0",
+		"protype": "^0.23.0"
+	}
 }
