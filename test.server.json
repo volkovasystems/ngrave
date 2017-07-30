@@ -1,0 +1,32 @@
+{
+	"stats": {
+		"suites": 2,
+		"tests": 1,
+		"passes": 1,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-07-30T06:58:01.233Z",
+		"end": "2017-07-30T06:58:01.238Z",
+		"duration": 5
+	},
+	"tests": [
+		{
+			"title": "should be equal to 12345",
+			"fullTitle": "ngrave ngrave with symbol,entity and value parameter should be equal to 12345",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to 12345",
+			"fullTitle": "ngrave ngrave with symbol,entity and value parameter should be equal to 12345",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
+}
