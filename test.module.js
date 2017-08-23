@@ -73,17 +73,17 @@ const path = require( "path" );
 
 describe( "ngrave", ( ) => {
 
-	describe( "ngrave with symbol,entity and value parameter", ( ) => {
+	describe( "`ngrave with symbol,entity and value parameter`", ( ) => {
 
 		it( "should be equal to 12345", ( ) => {
-			//: @ignore:
+
 			let symbol = Symbol( "hello" );
 			let data = { };
 
 			ngrave( symbol, data, 12345 );
 
 			assert.equal( data[ symbol ], 12345 );
-			//: @end-ignore
+
 		} );
 
 	} );
@@ -96,17 +96,17 @@ describe( "ngrave", ( ) => {
 
 describe( "ngrave", ( ) => {
 
-	describe( "ngrave with symbol,entity and value parameter", ( ) => {
+	describe( "`ngrave with symbol,entity and value parameter`", ( ) => {
 
 		it( "should be equal to 12345", ( ) => {
-			//: @ignore:
+
 			let symbol = Symbol( "hello" );
 			let data = { };
 
 			ngrave( symbol, data, 12345 );
 
 			assert.equal( data[ symbol ], 12345 );
-			//: @end-ignore
+
 		} );
 
 	} );
@@ -119,13 +119,11 @@ describe( "ngrave", ( ) => {
 
 describe( "ngrave", ( ) => {
 
-	const testBridge = path.resolve(__dirname, "bridge.html");
-	const bridgeURL = "file://" + testBridge;
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( "ngrave with symbol,entity and value parameter", ( ) => {
+	describe( "`ngrave with symbol,entity and value parameter`", ( ) => {
 
 		it( "should be equal to 12345", ( ) => {
-
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute( function( ){
 
@@ -137,9 +135,8 @@ describe( "ngrave", ( ) => {
 				return data[ symbol ];
 
 			} ).value;
-
-			assert.equal( result, 12345 );
 			//: @end-ignore
+			assert.equal( result, 12345 );
 
 		} );
 
