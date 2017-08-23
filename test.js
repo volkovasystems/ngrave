@@ -69,17 +69,17 @@ const ngrave = require( "./ngrave.js" );
 
 describe( "ngrave", ( ) => {
 
-	describe( "ngrave with symbol,entity and value parameter", ( ) => {
+	describe( "`ngrave with symbol,entity and value parameter`", ( ) => {
 
 		it( "should be equal to 12345", ( ) => {
-			//: @ignore:
+
 			let symbol = Symbol( "hello" );
 			let data = { };
 
 			ngrave( symbol, data, 12345 );
 
 			assert.equal( data[ symbol ], 12345 );
-			//: @end-ignore
+
 		} );
 
 	} );

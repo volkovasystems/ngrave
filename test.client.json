@@ -4,8 +4,8 @@
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-07-30T06:58:02.198Z",
-	"end": "2017-07-30T06:58:38.422Z",
+	"start": "2017-08-23T06:33:11.410Z",
+	"end": "2017-08-23T06:33:45.827Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -28,53 +28,53 @@
 		{
 			"name": "ngrave",
 			"duration": 0,
-			"start": "2017-07-30T06:58:38.132Z",
+			"start": "2017-08-23T06:33:45.541Z",
 			"tests": [],
 			"hooks": []
 		},
 		{
 			"name": "ngrave",
-			"duration": 109,
-			"start": "2017-07-30T06:58:38.133Z",
-			"end": "2017-07-30T06:58:38.242Z",
+			"duration": 108,
+			"start": "2017-08-23T06:33:45.542Z",
+			"end": "2017-08-23T06:33:45.650Z",
 			"tests": [],
 			"hooks": [
 				{
-					"start": "2017-07-30T06:58:38.138Z",
-					"end": "2017-07-30T06:58:38.138Z",
+					"start": "2017-08-23T06:33:45.543Z",
+					"end": "2017-08-23T06:33:45.543Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "ngrave",
 					"associatedTest": "should be equal to 12345"
 				},
 				{
-					"start": "2017-07-30T06:58:38.233Z",
-					"end": "2017-07-30T06:58:38.233Z",
+					"start": "2017-08-23T06:33:45.649Z",
+					"end": "2017-08-23T06:33:45.649Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "ngrave",
 					"associatedTest": "should be equal to 12345"
 				},
 				{
-					"start": "2017-07-30T06:58:38.242Z",
-					"end": "2017-07-30T06:58:38.243Z",
-					"duration": 1,
+					"start": "2017-08-23T06:33:45.650Z",
+					"end": "2017-08-23T06:33:45.650Z",
+					"duration": 0,
 					"title": "\"after all\" hook",
 					"associatedSuite": "ngrave"
 				}
 			]
 		},
 		{
-			"name": "ngrave with symbol,entity and value parameter",
-			"duration": 107,
-			"start": "2017-07-30T06:58:38.134Z",
-			"end": "2017-07-30T06:58:38.241Z",
+			"name": "`ngrave with symbol,entity and value parameter`",
+			"duration": 108,
+			"start": "2017-08-23T06:33:45.542Z",
+			"end": "2017-08-23T06:33:45.650Z",
 			"tests": [
 				{
 					"name": "should be equal to 12345",
-					"start": "2017-07-30T06:58:38.136Z",
-					"end": "2017-07-30T06:58:38.231Z",
-					"duration": 95,
+					"start": "2017-08-23T06:33:45.543Z",
+					"end": "2017-08-23T06:33:45.649Z",
+					"duration": 106,
 					"state": "pass"
 				}
 			],
