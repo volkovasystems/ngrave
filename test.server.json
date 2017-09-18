@@ -1,19 +1,26 @@
 {
 	"stats": {
-		"suites": 2,
-		"tests": 1,
-		"passes": 1,
+		"suites": 3,
+		"tests": 2,
+		"passes": 2,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-08-23T06:33:10.262Z",
-		"end": "2017-08-23T06:33:10.268Z",
+		"start": "2017-09-18T10:31:24.086Z",
+		"end": "2017-09-18T10:31:24.092Z",
 		"duration": 6
 	},
 	"tests": [
 		{
-			"title": "should be equal to 12345",
-			"fullTitle": "ngrave `ngrave with symbol,entity and value parameter` should be equal to 12345",
+			"title": "should push symbol property value",
+			"fullTitle": "ngrave `ngrave( Symbol( 'hello' ), { }, 12345 )` should push symbol property value",
 			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should push symbol property value",
+			"fullTitle": "ngrave `ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )` should push symbol property value",
+			"duration": 1,
 			"currentRetry": 0,
 			"err": {}
 		}
@@ -22,9 +29,16 @@
 	"failures": [],
 	"passes": [
 		{
-			"title": "should be equal to 12345",
-			"fullTitle": "ngrave `ngrave with symbol,entity and value parameter` should be equal to 12345",
+			"title": "should push symbol property value",
+			"fullTitle": "ngrave `ngrave( Symbol( 'hello' ), { }, 12345 )` should push symbol property value",
 			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should push symbol property value",
+			"fullTitle": "ngrave `ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )` should push symbol property value",
+			"duration": 1,
 			"currentRetry": 0,
 			"err": {}
 		}

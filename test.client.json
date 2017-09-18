@@ -1,11 +1,11 @@
 {
 	"state": {
-		"passed": 1,
+		"passed": 2,
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-08-23T06:33:11.410Z",
-	"end": "2017-08-23T06:33:45.827Z",
+	"start": "2017-09-18T10:31:25.198Z",
+	"end": "2017-09-18T10:32:19.286Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -28,36 +28,52 @@
 		{
 			"name": "ngrave",
 			"duration": 0,
-			"start": "2017-08-23T06:33:45.541Z",
+			"start": "2017-09-18T10:32:18.961Z",
 			"tests": [],
 			"hooks": []
 		},
 		{
 			"name": "ngrave",
-			"duration": 108,
-			"start": "2017-08-23T06:33:45.542Z",
-			"end": "2017-08-23T06:33:45.650Z",
+			"duration": 145,
+			"start": "2017-09-18T10:32:18.961Z",
+			"end": "2017-09-18T10:32:19.106Z",
 			"tests": [],
 			"hooks": [
 				{
-					"start": "2017-08-23T06:33:45.543Z",
-					"end": "2017-08-23T06:33:45.543Z",
+					"start": "2017-09-18T10:32:18.963Z",
+					"end": "2017-09-18T10:32:18.963Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "ngrave",
 					"associatedTest": "should be equal to 12345"
 				},
 				{
-					"start": "2017-08-23T06:33:45.649Z",
-					"end": "2017-08-23T06:33:45.649Z",
+					"start": "2017-09-18T10:32:19.059Z",
+					"end": "2017-09-18T10:32:19.059Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "ngrave",
 					"associatedTest": "should be equal to 12345"
 				},
 				{
-					"start": "2017-08-23T06:33:45.650Z",
-					"end": "2017-08-23T06:33:45.650Z",
+					"start": "2017-09-18T10:32:19.060Z",
+					"end": "2017-09-18T10:32:19.060Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "ngrave",
+					"associatedTest": "should push symbol property value"
+				},
+				{
+					"start": "2017-09-18T10:32:19.106Z",
+					"end": "2017-09-18T10:32:19.106Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "ngrave",
+					"associatedTest": "should push symbol property value"
+				},
+				{
+					"start": "2017-09-18T10:32:19.106Z",
+					"end": "2017-09-18T10:32:19.106Z",
 					"duration": 0,
 					"title": "\"after all\" hook",
 					"associatedSuite": "ngrave"
@@ -66,15 +82,31 @@
 		},
 		{
 			"name": "`ngrave with symbol,entity and value parameter`",
-			"duration": 108,
-			"start": "2017-08-23T06:33:45.542Z",
-			"end": "2017-08-23T06:33:45.650Z",
+			"duration": 98,
+			"start": "2017-09-18T10:32:18.962Z",
+			"end": "2017-09-18T10:32:19.060Z",
 			"tests": [
 				{
 					"name": "should be equal to 12345",
-					"start": "2017-08-23T06:33:45.543Z",
-					"end": "2017-08-23T06:33:45.649Z",
-					"duration": 106,
+					"start": "2017-09-18T10:32:18.962Z",
+					"end": "2017-09-18T10:32:19.058Z",
+					"duration": 96,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )`",
+			"duration": 46,
+			"start": "2017-09-18T10:32:19.060Z",
+			"end": "2017-09-18T10:32:19.106Z",
+			"tests": [
+				{
+					"name": "should push symbol property value",
+					"start": "2017-09-18T10:32:19.060Z",
+					"end": "2017-09-18T10:32:19.106Z",
+					"duration": 46,
 					"state": "pass"
 				}
 			],

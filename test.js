@@ -49,13 +49,13 @@
 
 	@include:
 		{
-			"assert": "should",
+			"assert": "should/as-function",
 			"ngrave": "ngrave"
 		}
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const ngrave = require( "./ngrave.js" );
@@ -69,10 +69,8 @@ const ngrave = require( "./ngrave.js" );
 
 describe( "ngrave", ( ) => {
 
-	describe( "`ngrave with symbol,entity and value parameter`", ( ) => {
-
-		it( "should be equal to 12345", ( ) => {
-
+	describe( "`ngrave( Symbol( 'hello' ), { }, 12345 )`", ( ) => {
+		it( "should push symbol property value", ( ) => {
 			let symbol = Symbol( "hello" );
 			let data = { };
 
@@ -81,7 +79,18 @@ describe( "ngrave", ( ) => {
 			assert.equal( data[ symbol ], 12345 );
 
 		} );
+	} );
 
+	describe( "`ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )`", ( ) => {
+		it( "should push symbol property value", ( ) => {
+			let symbol = Symbol.for( "extensive" );
+			let data = function Hello( ){ };
+
+			ngrave( Symbol.for( "extensive" ), data, Symbol.for( "extensive" ) );
+
+			assert.equal( data[ symbol ], Symbol.for( "extensive" ) );
+
+		} );
 	} );
 
 } );
