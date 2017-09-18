@@ -160,6 +160,27 @@ describe( "ngrave", ( ) => {
 
 	} );
 
+	describe( "`ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )`", ( ) => {
+		it( "should push symbol property value", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let symbol = Symbol.for( "extensive" );
+					let data = function Hello( ){ };
+
+					let test = ngrave( Symbol.for( "extensive" ), data, Symbol.for( "extensive" ) );
+
+					return test[ symbol ].toString( );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, "Symbol(extensive)" );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
