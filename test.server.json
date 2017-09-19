@@ -1,26 +1,40 @@
 {
 	"stats": {
-		"suites": 3,
-		"tests": 2,
-		"passes": 2,
+		"suites": 5,
+		"tests": 4,
+		"passes": 4,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-09-18T10:31:24.086Z",
-		"end": "2017-09-18T10:31:24.092Z",
-		"duration": 6
+		"start": "2017-09-19T04:36:20.900Z",
+		"end": "2017-09-19T04:36:20.907Z",
+		"duration": 7
 	},
 	"tests": [
 		{
-			"title": "should push symbol property value",
-			"fullTitle": "ngrave `ngrave( Symbol( 'hello' ), { }, 12345 )` should push symbol property value",
+			"title": "should contain Symbol( 'hello' ) property with value",
+			"fullTitle": "ngrave `ngrave( Symbol( 'hello' ), { }, 12345 )` should contain Symbol( 'hello' ) property with value",
 			"duration": 2,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
-			"title": "should push symbol property value",
-			"fullTitle": "ngrave `ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )` should push symbol property value",
-			"duration": 1,
+			"title": "should contain Symbol( 'extensive' ) property with value",
+			"fullTitle": "ngrave `ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )` should contain Symbol( 'extensive' ) property with value",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should contain Symbol( 'symbiosis' ) property with value",
+			"fullTitle": "ngrave `ngrave( 'symbiosis', data, symbol )` should contain Symbol( 'symbiosis' ) property with value",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should contain Symbol( 1 ) property with value",
+			"fullTitle": "ngrave `ngrave( 1, { }, 1 )` should contain Symbol( 1 ) property with value",
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		}
@@ -29,16 +43,30 @@
 	"failures": [],
 	"passes": [
 		{
-			"title": "should push symbol property value",
-			"fullTitle": "ngrave `ngrave( Symbol( 'hello' ), { }, 12345 )` should push symbol property value",
+			"title": "should contain Symbol( 'hello' ) property with value",
+			"fullTitle": "ngrave `ngrave( Symbol( 'hello' ), { }, 12345 )` should contain Symbol( 'hello' ) property with value",
 			"duration": 2,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
-			"title": "should push symbol property value",
-			"fullTitle": "ngrave `ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )` should push symbol property value",
-			"duration": 1,
+			"title": "should contain Symbol( 'extensive' ) property with value",
+			"fullTitle": "ngrave `ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )` should contain Symbol( 'extensive' ) property with value",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should contain Symbol( 'symbiosis' ) property with value",
+			"fullTitle": "ngrave `ngrave( 'symbiosis', data, symbol )` should contain Symbol( 'symbiosis' ) property with value",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should contain Symbol( 1 ) property with value",
+			"fullTitle": "ngrave `ngrave( 1, { }, 1 )` should contain Symbol( 1 ) property with value",
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		}

@@ -1,11 +1,11 @@
 {
 	"state": {
-		"passed": 2,
+		"passed": 4,
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-09-18T10:31:25.198Z",
-	"end": "2017-09-18T10:32:19.286Z",
+	"start": "2017-09-19T04:36:22.073Z",
+	"end": "2017-09-19T04:36:57.043Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -28,52 +28,84 @@
 		{
 			"name": "ngrave",
 			"duration": 0,
-			"start": "2017-09-18T10:32:18.961Z",
+			"start": "2017-09-19T04:36:56.614Z",
 			"tests": [],
 			"hooks": []
 		},
 		{
 			"name": "ngrave",
-			"duration": 145,
-			"start": "2017-09-18T10:32:18.961Z",
-			"end": "2017-09-18T10:32:19.106Z",
+			"duration": 248,
+			"start": "2017-09-19T04:36:56.615Z",
+			"end": "2017-09-19T04:36:56.863Z",
 			"tests": [],
 			"hooks": [
 				{
-					"start": "2017-09-18T10:32:18.963Z",
-					"end": "2017-09-18T10:32:18.963Z",
+					"start": "2017-09-19T04:36:56.631Z",
+					"end": "2017-09-19T04:36:56.631Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "ngrave",
-					"associatedTest": "should be equal to 12345"
+					"associatedTest": "should contain Symbol( 'hello' ) property with value"
 				},
 				{
-					"start": "2017-09-18T10:32:19.059Z",
-					"end": "2017-09-18T10:32:19.059Z",
+					"start": "2017-09-19T04:36:56.711Z",
+					"end": "2017-09-19T04:36:56.711Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "ngrave",
-					"associatedTest": "should be equal to 12345"
+					"associatedTest": "should contain Symbol( 'hello' ) property with value"
 				},
 				{
-					"start": "2017-09-18T10:32:19.060Z",
-					"end": "2017-09-18T10:32:19.060Z",
+					"start": "2017-09-19T04:36:56.712Z",
+					"end": "2017-09-19T04:36:56.712Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "ngrave",
-					"associatedTest": "should push symbol property value"
+					"associatedTest": "should contain Symbol( 'extensive' ) property with value"
 				},
 				{
-					"start": "2017-09-18T10:32:19.106Z",
-					"end": "2017-09-18T10:32:19.106Z",
+					"start": "2017-09-19T04:36:56.759Z",
+					"end": "2017-09-19T04:36:56.759Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "ngrave",
-					"associatedTest": "should push symbol property value"
+					"associatedTest": "should contain Symbol( 'extensive' ) property with value"
 				},
 				{
-					"start": "2017-09-18T10:32:19.106Z",
-					"end": "2017-09-18T10:32:19.106Z",
+					"start": "2017-09-19T04:36:56.759Z",
+					"end": "2017-09-19T04:36:56.759Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "ngrave",
+					"associatedTest": "should contain Symbol( 'symbiosis' ) property with value"
+				},
+				{
+					"start": "2017-09-19T04:36:56.806Z",
+					"end": "2017-09-19T04:36:56.806Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "ngrave",
+					"associatedTest": "should contain Symbol( 'symbiosis' ) property with value"
+				},
+				{
+					"start": "2017-09-19T04:36:56.806Z",
+					"end": "2017-09-19T04:36:56.807Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "ngrave",
+					"associatedTest": "should contain Symbol( 1 ) property with value"
+				},
+				{
+					"start": "2017-09-19T04:36:56.862Z",
+					"end": "2017-09-19T04:36:56.862Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "ngrave",
+					"associatedTest": "should contain Symbol( 1 ) property with value"
+				},
+				{
+					"start": "2017-09-19T04:36:56.863Z",
+					"end": "2017-09-19T04:36:56.863Z",
 					"duration": 0,
 					"title": "\"after all\" hook",
 					"associatedSuite": "ngrave"
@@ -81,16 +113,16 @@
 			]
 		},
 		{
-			"name": "`ngrave with symbol,entity and value parameter`",
-			"duration": 98,
-			"start": "2017-09-18T10:32:18.962Z",
-			"end": "2017-09-18T10:32:19.060Z",
+			"name": "`ngrave( Symbol( 'hello' ), { }, 12345 )`",
+			"duration": 97,
+			"start": "2017-09-19T04:36:56.615Z",
+			"end": "2017-09-19T04:36:56.712Z",
 			"tests": [
 				{
-					"name": "should be equal to 12345",
-					"start": "2017-09-18T10:32:18.962Z",
-					"end": "2017-09-18T10:32:19.058Z",
-					"duration": 96,
+					"name": "should contain Symbol( 'hello' ) property with value",
+					"start": "2017-09-19T04:36:56.616Z",
+					"end": "2017-09-19T04:36:56.711Z",
+					"duration": 95,
 					"state": "pass"
 				}
 			],
@@ -98,15 +130,47 @@
 		},
 		{
 			"name": "`ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )`",
-			"duration": 46,
-			"start": "2017-09-18T10:32:19.060Z",
-			"end": "2017-09-18T10:32:19.106Z",
+			"duration": 47,
+			"start": "2017-09-19T04:36:56.712Z",
+			"end": "2017-09-19T04:36:56.759Z",
 			"tests": [
 				{
-					"name": "should push symbol property value",
-					"start": "2017-09-18T10:32:19.060Z",
-					"end": "2017-09-18T10:32:19.106Z",
-					"duration": 46,
+					"name": "should contain Symbol( 'extensive' ) property with value",
+					"start": "2017-09-19T04:36:56.712Z",
+					"end": "2017-09-19T04:36:56.759Z",
+					"duration": 47,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`ngrave( 'symbiosis', data, symbol )`",
+			"duration": 47,
+			"start": "2017-09-19T04:36:56.759Z",
+			"end": "2017-09-19T04:36:56.806Z",
+			"tests": [
+				{
+					"name": "should contain Symbol( 'symbiosis' ) property with value",
+					"start": "2017-09-19T04:36:56.759Z",
+					"end": "2017-09-19T04:36:56.806Z",
+					"duration": 47,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`ngrave( 1, { }, 1 )`",
+			"duration": 57,
+			"start": "2017-09-19T04:36:56.806Z",
+			"end": "2017-09-19T04:36:56.863Z",
+			"tests": [
+				{
+					"name": "should contain Symbol( 1 ) property with value",
+					"start": "2017-09-19T04:36:56.806Z",
+					"end": "2017-09-19T04:36:56.862Z",
+					"duration": 56,
 					"state": "pass"
 				}
 			],
