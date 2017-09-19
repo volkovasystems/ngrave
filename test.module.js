@@ -70,11 +70,10 @@ const path = require( "path" );
 //: @end-bridge
 
 //: @server:
-
 describe( "ngrave", ( ) => {
 
 	describe( "`ngrave( Symbol( 'hello' ), { }, 12345 )`", ( ) => {
-		it( "should push symbol property value", ( ) => {
+		it( "should contain Symbol( 'hello' ) property with value", ( ) => {
 			let symbol = Symbol( "hello" );
 			let data = { };
 
@@ -86,27 +85,47 @@ describe( "ngrave", ( ) => {
 	} );
 
 	describe( "`ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )`", ( ) => {
-		it( "should push symbol property value", ( ) => {
+		it( "should contain Symbol( 'extensive' ) property with value", ( ) => {
 			let symbol = Symbol.for( "extensive" );
 			let data = function Hello( ){ };
 
 			ngrave( Symbol.for( "extensive" ), data, Symbol.for( "extensive" ) );
 
-			assert.equal( data[ symbol ], Symbol.for( "extensive" ) );
+			assert.equal( data[ symbol ], symbol );
+
+		} );
+	} );
+
+	describe( "`ngrave( 'symbiosis', data, symbol )`", ( ) => {
+		it( "should contain Symbol( 'symbiosis' ) property with value", ( ) => {
+			let symbol = Symbol( "symbiosis" );
+			let data = { };
+
+			ngrave( "symbiosis", data, symbol );
+
+			assert.equal( Object.getOwnPropertySymbols( data )[ 0 ].toString( ), symbol.toString( ) );
+
+		} );
+	} );
+
+	describe( "`ngrave( 1, { }, 1 )`", ( ) => {
+		it( "should contain Symbol( 1 ) property with value", ( ) => {
+			let data = { };
+			ngrave( 1, data, 1 );
+
+			assert.equal( Object.getOwnPropertySymbols( data )[ 0 ].toString( ), Symbol( 1 ).toString( ) );
 
 		} );
 	} );
 
 } );
-
 //: @end-server
 
 //: @client:
-
 describe( "ngrave", ( ) => {
 
 	describe( "`ngrave( Symbol( 'hello' ), { }, 12345 )`", ( ) => {
-		it( "should push symbol property value", ( ) => {
+		it( "should contain Symbol( 'hello' ) property with value", ( ) => {
 			let symbol = Symbol( "hello" );
 			let data = { };
 
@@ -118,19 +137,40 @@ describe( "ngrave", ( ) => {
 	} );
 
 	describe( "`ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )`", ( ) => {
-		it( "should push symbol property value", ( ) => {
+		it( "should contain Symbol( 'extensive' ) property with value", ( ) => {
 			let symbol = Symbol.for( "extensive" );
 			let data = function Hello( ){ };
 
 			ngrave( Symbol.for( "extensive" ), data, Symbol.for( "extensive" ) );
 
-			assert.equal( data[ symbol ], Symbol.for( "extensive" ) );
+			assert.equal( data[ symbol ], symbol );
+
+		} );
+	} );
+
+	describe( "`ngrave( 'symbiosis', data, symbol )`", ( ) => {
+		it( "should contain Symbol( 'symbiosis' ) property with value", ( ) => {
+			let symbol = Symbol( "symbiosis" );
+			let data = { };
+
+			ngrave( "symbiosis", data, symbol );
+
+			assert.equal( Object.getOwnPropertySymbols( data )[ 0 ].toString( ), symbol.toString( ) );
+
+		} );
+	} );
+
+	describe( "`ngrave( 1, { }, 1 )`", ( ) => {
+		it( "should contain Symbol( 1 ) property with value", ( ) => {
+			let data = { };
+			ngrave( 1, data, 1 );
+
+			assert.equal( Object.getOwnPropertySymbols( data )[ 0 ].toString( ), Symbol( 1 ).toString( ) );
 
 		} );
 	} );
 
 } );
-
 //: @end-client
 
 //: @bridge:
@@ -139,9 +179,9 @@ describe( "ngrave", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( "`ngrave with symbol,entity and value parameter`", ( ) => {
+	describe( "`ngrave( Symbol( 'hello' ), { }, 12345 )`", ( ) => {
 
-		it( "should be equal to 12345", ( ) => {
+		it( "should contain Symbol( 'hello' ) property with value", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute( function( ){
 
@@ -161,7 +201,7 @@ describe( "ngrave", ( ) => {
 	} );
 
 	describe( "`ngrave( Symbol.for( 'extensive' ), function Hello( ){ }, Symbol.for( 'extensive' ) )`", ( ) => {
-		it( "should push symbol property value", ( ) => {
+		it( "should contain Symbol( 'extensive' ) property with value", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
@@ -177,6 +217,46 @@ describe( "ngrave", ( ) => {
 			).value;
 			//: @end-ignore
 			assert.equal( result, "Symbol(extensive)" );
+
+		} );
+	} );
+
+	describe( "`ngrave( 'symbiosis', data, symbol )`", ( ) => {
+		it( "should contain Symbol( 'symbiosis' ) property with value", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let symbol = Symbol( "symbiosis" );
+					let data = { };
+
+					ngrave( "symbiosis", data, symbol );
+
+					return Object.getOwnPropertySymbols( data )[ 0 ].toString( );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, "Symbol(symbiosis)" );
+
+		} );
+	} );
+
+	describe( "`ngrave( 1, { }, 1 )`", ( ) => {
+		it( "should contain Symbol( 1 ) property with value", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let data = { };
+					ngrave( 1, data, 1 );
+
+					return Object.getOwnPropertySymbols( data )[ 0 ].toString( );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, "Symbol(1)" );
 
 		} );
 	} );
